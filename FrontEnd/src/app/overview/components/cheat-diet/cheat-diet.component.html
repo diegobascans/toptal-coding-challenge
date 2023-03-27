@@ -1,0 +1,23 @@
+<div class="cheating-dialog" [ngClass]="{disableModal: saving}">
+  <div class="title">Diet-Cheating</div>
+  <div class="sub-title">Mark the foods that you want to ignore in the calories count.</div>
+  <form  [formGroup]="cheatFoodForm" class="cheating-form" (submit)="updateCheatingFood()">
+    <mat-checkbox *ngFor="let cheatedFood of cheatedFoods"
+                  formControlName="{{'food_' + cheatedFood.food.id}}"
+                  [checked]="cheatedFood.cheated"
+                  (change)="cheatedFood.cheated = $event.checked">
+      {{cheatedFood.food.description}}
+    </mat-checkbox>
+    <div class="loader-container" *ngIf="loading">
+      <mat-progress-spinner
+        color="primary"
+        diameter="40"
+        mode="indeterminate">
+      </mat-progress-spinner>
+    </div>
+    <div class="cheating-footer">
+      <button type="button" mat-stroked-button (click)="onCancelClick()" [disabled]="loading" >Cancel</button>
+      <button type="submit" mat-stroked-button color="primary" [disabled]="!cheatFoodForm.valid || loading">Update</button>
+    </div>
+  </form>
+</div>

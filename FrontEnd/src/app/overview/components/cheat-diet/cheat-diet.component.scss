@@ -1,0 +1,45 @@
+.cheating-dialog {
+
+  &.disableModal {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  width: 20rem;
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .sub-title {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+  }
+
+  .cheating-form {
+    display: flex;
+    flex-direction: column;
+
+    mat-form-field {
+      padding-bottom: 6px;
+    }
+  }
+
+  .loader-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cheating-footer {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 120px;
+    }
+  }
+}

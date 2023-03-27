@@ -1,0 +1,76 @@
+@import "../../../common/styles/generic-page";
+
+.page-body-header {
+  display: flex;
+  justify-content: space-between;
+
+  .button-wrapper {
+    :first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+.table-title-wrapper {
+  padding-left: 6px;
+  margin-bottom: 10px;
+
+  .table-title {
+    font-size: 18px;
+
+    .table-subtitle {
+      padding-left: 4px;
+      font-size: 12px;
+      color:  #bbbbbb;
+    }
+  }
+}
+
+.table-filter-wrapper {
+  padding-left: 9px;
+
+  app-field-validator {
+    padding-top: 7px;
+  }
+}
+
+.table-container {
+  max-height: 85%;
+  overflow: auto;
+
+  table {
+    width: 100%;
+
+    .mat-column-day,
+    .mat-column-calories{
+      width: 33%;
+    }
+  }
+}
+
+.table-footer {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+
+  &.empty-message {
+    font-size: 14px;
+    color: #666666;
+  }
+
+  &.show-more {
+    cursor: pointer;
+    color: #666666;
+    text-decoration: underline;
+  }
+}
+
+.limit-exceeded {
+  display: flex;
+  .limit-exceeded-icon {
+    color: #c8c842;
+    font-size: 20px;
+  }
+}

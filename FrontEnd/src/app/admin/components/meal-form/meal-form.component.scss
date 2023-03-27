@@ -1,0 +1,33 @@
+.new-meal-dialog {
+
+  &.disableModal {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  width: 20rem;
+
+  .title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .new-meal-form {
+    display: flex;
+    flex-direction: column;
+
+    mat-form-field {
+      padding-bottom: 6px;
+    }
+  }
+
+  .meal-form-footer {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: 120px;
+    }
+  }
+}

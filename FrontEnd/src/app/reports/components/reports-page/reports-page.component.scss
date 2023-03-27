@@ -1,0 +1,53 @@
+@import "../../../common/styles/generic-page";
+
+.card-information-container {
+  display: flex;
+  margin-bottom: 25px;
+  width: 100%;
+  gap: 25px;
+  mat-card {
+    width: 100%;
+  }
+
+  .card-message {
+    display: flex;
+
+    .card-message-value {
+      padding-left: 10px;
+    }
+  }
+}
+
+.table-container {
+  max-height: 85%;
+  overflow: auto;
+
+  table {
+    width: 100%;
+
+    .mat-column-userId,
+    .mat-column-name,
+    .mat-column-calories{
+      width: 33%;
+    }
+  }
+}
+
+.table-loader {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.empty-message {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-size: 14px;
+  color: #666666;
+}
+

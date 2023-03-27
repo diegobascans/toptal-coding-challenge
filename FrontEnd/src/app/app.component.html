@@ -1,0 +1,25 @@
+<mat-toolbar class="mat-elevation-z6">
+  <span><mat-icon>{{icon}}</mat-icon>{{title}}</span>
+  <div *ngIf="isAuthenticated">
+    <a mat-button [routerLink]="'/overview'" routerLinkActive="active_route">Overview</a>
+    <ng-container *ngIf="isAdmin;">
+      <a mat-button [routerLink]="'/admin'" routerLinkActive="active_route">Admin</a>
+      <a mat-button [routerLink]="'/reports'" routerLinkActive="active_route">Reports</a>
+    </ng-container>
+  </div>
+  <span class="spacer"></span>
+  <div class="user-information" *ngIf="isAuthenticated">
+    <span>Welcome back {{username}}<mat-icon>account_circle</mat-icon></span>
+  </div>
+</mat-toolbar>
+<div *ngIf="!isLoading; else loader">
+  <router-outlet></router-outlet>
+</div>
+<ng-template #loader>
+  <div class="loader-container">
+    <mat-progress-spinner
+      color="primary"
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </div>
+</ng-template>

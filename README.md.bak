@@ -1,0 +1,7 @@
+The are a couple of steps to run the application.
+
+Is developed in Angular 13 and .NET 6 (Using SQL Server)
+
+To publish the Database.
+ - Open the appSettings.json and update the DBConnection key with you database connection string.
+ 
